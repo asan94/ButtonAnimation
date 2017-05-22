@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var animationButton: ShakeButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        animationButton.layer.cornerRadius = animationButton.frame.height / 2
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +23,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func animationButtonCliked(_ sender: ShakeButton) {
+        sender.shake()
+    }
 
 }
 
